@@ -26,54 +26,6 @@ public interface Servicios {
 
     /**
      * 
-     * @param name
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "hello", targetNamespace = "http://sv/", className = "sv.Hello")
-    @ResponseWrapper(localName = "helloResponse", targetNamespace = "http://sv/", className = "sv.HelloResponse")
-    @Action(input = "http://sv/servicios/helloRequest", output = "http://sv/servicios/helloResponse")
-    public String hello(
-        @WebParam(name = "name", targetNamespace = "")
-        String name);
-
-    /**
-     * 
-     * @param num1
-     * @param num2
-     * @return
-     *     returns java.lang.Double
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "multiplicacion", targetNamespace = "http://sv/", className = "sv.Multiplicacion")
-    @ResponseWrapper(localName = "multiplicacionResponse", targetNamespace = "http://sv/", className = "sv.MultiplicacionResponse")
-    @Action(input = "http://sv/servicios/multiplicacionRequest", output = "http://sv/servicios/multiplicacionResponse")
-    public Double multiplicacion(
-        @WebParam(name = "Num1", targetNamespace = "")
-        double num1,
-        @WebParam(name = "Num2", targetNamespace = "")
-        double num2);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "valorResultado", targetNamespace = "http://sv/", className = "sv.ValorResultado")
-    @ResponseWrapper(localName = "valorResultadoResponse", targetNamespace = "http://sv/", className = "sv.ValorResultadoResponse")
-    @Action(input = "http://sv/servicios/valorResultadoRequest", output = "http://sv/servicios/valorResultadoResponse")
-    public String valorResultado(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
-
-    /**
-     * 
      * @param exponente
      * @param base
      * @return
@@ -92,18 +44,21 @@ public interface Servicios {
 
     /**
      * 
-     * @param palabra
+     * @param num1
+     * @param num2
      * @return
-     *     returns java.lang.String
+     *     returns java.lang.Double
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "diccionario", targetNamespace = "http://sv/", className = "sv.Diccionario")
-    @ResponseWrapper(localName = "diccionarioResponse", targetNamespace = "http://sv/", className = "sv.DiccionarioResponse")
-    @Action(input = "http://sv/servicios/diccionarioRequest", output = "http://sv/servicios/diccionarioResponse")
-    public String diccionario(
-        @WebParam(name = "palabra", targetNamespace = "")
-        String palabra);
+    @RequestWrapper(localName = "suma", targetNamespace = "http://sv/", className = "sv.Suma")
+    @ResponseWrapper(localName = "sumaResponse", targetNamespace = "http://sv/", className = "sv.SumaResponse")
+    @Action(input = "http://sv/servicios/sumaRequest", output = "http://sv/servicios/sumaResponse")
+    public Double suma(
+        @WebParam(name = "Num1", targetNamespace = "")
+        double num1,
+        @WebParam(name = "Num2", targetNamespace = "")
+        double num2);
 
     /**
      * 
@@ -122,6 +77,51 @@ public interface Servicios {
 
     /**
      * 
+     * @param name
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "hello", targetNamespace = "http://sv/", className = "sv.Hello")
+    @ResponseWrapper(localName = "helloResponse", targetNamespace = "http://sv/", className = "sv.HelloResponse")
+    @Action(input = "http://sv/servicios/helloRequest", output = "http://sv/servicios/helloResponse")
+    public String hello(
+        @WebParam(name = "name", targetNamespace = "")
+        String name);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "valorResultado", targetNamespace = "http://sv/", className = "sv.ValorResultado")
+    @ResponseWrapper(localName = "valorResultadoResponse", targetNamespace = "http://sv/", className = "sv.ValorResultadoResponse")
+    @Action(input = "http://sv/servicios/valorResultadoRequest", output = "http://sv/servicios/valorResultadoResponse")
+    public String valorResultado(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param palabra
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "diccionario", targetNamespace = "http://sv/", className = "sv.Diccionario")
+    @ResponseWrapper(localName = "diccionarioResponse", targetNamespace = "http://sv/", className = "sv.DiccionarioResponse")
+    @Action(input = "http://sv/servicios/diccionarioRequest", output = "http://sv/servicios/diccionarioResponse")
+    public String diccionario(
+        @WebParam(name = "palabra", targetNamespace = "")
+        String palabra);
+
+    /**
+     * 
      * @param num1
      * @param num2
      * @return
@@ -129,10 +129,10 @@ public interface Servicios {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "suma", targetNamespace = "http://sv/", className = "sv.Suma")
-    @ResponseWrapper(localName = "sumaResponse", targetNamespace = "http://sv/", className = "sv.SumaResponse")
-    @Action(input = "http://sv/servicios/sumaRequest", output = "http://sv/servicios/sumaResponse")
-    public Double suma(
+    @RequestWrapper(localName = "multiplicacion", targetNamespace = "http://sv/", className = "sv.Multiplicacion")
+    @ResponseWrapper(localName = "multiplicacionResponse", targetNamespace = "http://sv/", className = "sv.MultiplicacionResponse")
+    @Action(input = "http://sv/servicios/multiplicacionRequest", output = "http://sv/servicios/multiplicacionResponse")
+    public Double multiplicacion(
         @WebParam(name = "Num1", targetNamespace = "")
         double num1,
         @WebParam(name = "Num2", targetNamespace = "")
@@ -155,5 +155,95 @@ public interface Servicios {
         double num1,
         @WebParam(name = "Num2", targetNamespace = "")
         double num2);
+
+    /**
+     * 
+     * @param num1
+     * @param num2
+     * @return
+     *     returns java.lang.Integer
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "divicion", targetNamespace = "http://sv/", className = "sv.Divicion")
+    @ResponseWrapper(localName = "divicionResponse", targetNamespace = "http://sv/", className = "sv.DivicionResponse")
+    @Action(input = "http://sv/servicios/divicionRequest", output = "http://sv/servicios/divicionResponse")
+    public Integer divicion(
+        @WebParam(name = "Num1", targetNamespace = "")
+        int num1,
+        @WebParam(name = "Num2", targetNamespace = "")
+        int num2);
+
+    /**
+     * 
+     * @param numero
+     * @return
+     *     returns java.lang.Integer
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "factorial", targetNamespace = "http://sv/", className = "sv.Factorial")
+    @ResponseWrapper(localName = "factorialResponse", targetNamespace = "http://sv/", className = "sv.FactorialResponse")
+    @Action(input = "http://sv/servicios/factorialRequest", output = "http://sv/servicios/factorialResponse")
+    public Integer factorial(
+        @WebParam(name = "numero", targetNamespace = "")
+        int numero);
+
+    /**
+     * 
+     * @param password
+     * @param user
+     * @return
+     *     returns java.lang.Boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "login", targetNamespace = "http://sv/", className = "sv.Login")
+    @ResponseWrapper(localName = "loginResponse", targetNamespace = "http://sv/", className = "sv.LoginResponse")
+    @Action(input = "http://sv/servicios/loginRequest", output = "http://sv/servicios/loginResponse")
+    public Boolean login(
+        @WebParam(name = "user", targetNamespace = "")
+        String user,
+        @WebParam(name = "password", targetNamespace = "")
+        String password);
+
+    /**
+     * 
+     * @param lado3
+     * @param lado2
+     * @param lado1
+     * @return
+     *     returns double
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "volumenCubo", targetNamespace = "http://sv/", className = "sv.VolumenCubo")
+    @ResponseWrapper(localName = "volumenCuboResponse", targetNamespace = "http://sv/", className = "sv.VolumenCuboResponse")
+    @Action(input = "http://sv/servicios/volumenCuboRequest", output = "http://sv/servicios/volumenCuboResponse")
+    public double volumenCubo(
+        @WebParam(name = "lado1", targetNamespace = "")
+        double lado1,
+        @WebParam(name = "lado2", targetNamespace = "")
+        double lado2,
+        @WebParam(name = "lado3", targetNamespace = "")
+        double lado3);
+
+    /**
+     * 
+     * @param altura
+     * @param base
+     * @return
+     *     returns double
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "area", targetNamespace = "http://sv/", className = "sv.Area")
+    @ResponseWrapper(localName = "areaResponse", targetNamespace = "http://sv/", className = "sv.AreaResponse")
+    @Action(input = "http://sv/servicios/areaRequest", output = "http://sv/servicios/areaResponse")
+    public double area(
+        @WebParam(name = "base", targetNamespace = "")
+        double base,
+        @WebParam(name = "altura", targetNamespace = "")
+        double altura);
 
 }

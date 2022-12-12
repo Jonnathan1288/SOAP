@@ -13,16 +13,25 @@ import sv.Servicios_Service;
  * @author DELL
  */
 public class consumoServicio {
+
     public static void main(String[] args) {
         Servicios_Service servicio = new Servicios_Service();
         Servicios cliente = servicio.getServiciosPort();
-        System.out.println("Resultado 1: "+cliente.hello("Jonnathgan"));
-        System.out.println("Resultado 2: "+cliente.diccionario("lan"));
-        System.out.println("Resultado 3: "+cliente.parImpar(3));
-        System.out.println("Resultado 4: "+cliente.potencia(2, 3));
-        System.out.println("Resultado 5 SUMA: "+cliente.suma(20, 50));
-        System.out.println("Resultado 6 RESTA: "+cliente.resta(50, 30));
-        System.out.println("Resultado 7 MULTIPLICACIÓN: "+cliente.multiplicacion(20, 50));
-        
+        System.out.println("Resultado 1: " + cliente.hello("Jonnathgan"));
+        System.out.println("Resultado 2: " + cliente.diccionario("lan"));
+        System.out.println("Resultado 3: " + cliente.parImpar(3));
+        System.out.println("Resultado 4: " + cliente.potencia(2, 3));
+        System.out.println("Resultado 5 SUMA: " + cliente.suma(20, 50));
+        System.out.println("Resultado 6 RESTA: " + cliente.resta(50, 30));
+        System.out.println("Resultado 7 MULTIPLICACIÓN: " + cliente.multiplicacion(20, 50));
+        System.out.println("Resultado 8 Divición: " + cliente.divicion(20, 5));
+        System.out.println("Resultado 9 Factorial: " + cliente.factorial(5));
+        System.out.println("Resultado 10 volumenCubo: " + cliente.volumenCubo(2, 3, 2));
+        if (cliente.login("Jonnathan", "md3108")) {
+            System.out.println("Resultado 11 Login: is succesful");
+        } else {
+            System.out.println("Resultado 11 Login: is User error");
+        }
+
     }
 }

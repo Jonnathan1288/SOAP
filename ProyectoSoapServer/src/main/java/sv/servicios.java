@@ -5,6 +5,7 @@
  */
 package sv;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -58,7 +59,6 @@ public class servicios {
     public String diccionario(@WebParam(name = "palabra") String palabra) {
         //TODO write your implementation code here:
         String palabares = "";
-
         try {
             String result = valorResultado(palabra);
             if (result.equals("null")) {
@@ -146,5 +146,62 @@ public class servicios {
         //TODO write your implementation code here:
         double multiplicacionR = num1 * num2;
         return multiplicacionR;
+    }
+    
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "divicion")
+    public Integer divicion(@WebParam(name = "Num1") int num1, @WebParam(name = "Num2") int num2) {
+        //TODO write your implementation code here:
+        int divM = num1 / num2;
+        return divM;
+    }
+    
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "login")
+    public Boolean login(@WebParam(name = "user") String user, @WebParam(name = "password") String password) {
+        if(user.equals("Jonnathan") && password.equals("md3108")){
+            return true;
+        }else{
+            return false;
+        }   
+    }
+    
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "area")
+    public double area(@WebParam(name = "base") double base, @WebParam(name = "altura") double altura) {
+        //TODO write your implementation code here:
+        double area = base / altura;
+        return area;
+    }
+    
+    
+     /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "factorial")
+    public Integer factorial(@WebParam(name = "numero") int numero) {
+        int fact = 1;
+        for(int i = 1; i<= numero; i++){
+            fact = fact * i;
+        }
+        
+        return fact;
+    }
+    
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "volumenCubo")
+    public double volumenCubo(@WebParam(name = "lado1") double lado1, @WebParam(name = "lado2") double lado2, @WebParam(name = "lado3") double lado3) {
+        //TODO write your implementation code here:
+        double volumen = lado1 * lado2 * lado3;
+        return volumen;
     }
 }

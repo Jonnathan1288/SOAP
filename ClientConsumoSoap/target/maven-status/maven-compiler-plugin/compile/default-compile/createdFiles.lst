@@ -1,6 +1,16 @@
+sv\LoginResponse.class
+sv\VolumenCuboResponse.class
+sv\FactorialResponse.class
+sv\Login.class
 sv\MultiplicacionResponse.class
+sv\AreaResponse.class
+sv\VolumenCubo.class
+sv\Area.class
 sv\Multiplicacion.class
+sv\Divicion.class
 sv\SumaResponse.class
+sv\Factorial.class
+sv\DivicionResponse.class
 sv\Suma.class
 sv\Resta.class
 sv\RestaResponse.class

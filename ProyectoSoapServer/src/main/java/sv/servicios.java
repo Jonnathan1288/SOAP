@@ -7,6 +7,8 @@ package sv;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -67,7 +69,7 @@ public class servicios {
                 palabares = result;
             }
         } catch (java.lang.NullPointerException e) {
-            palabares =  "No puede ingresar campos vacios";
+            palabares = "No puede ingresar campos vacios";
         }
 //        if (palabra == null) {
 //            palabares = "No puede ingresar campos vacios";
@@ -124,10 +126,10 @@ public class servicios {
     @WebMethod(operationName = "suma")
     public Double suma(@WebParam(name = "Num1") double num1, @WebParam(name = "Num2") double num2) {
         //TODO write your implementation code here:
-        double sumaV = num1 +num2;
+        double sumaV = num1 + num2;
         return sumaV;
     }
-    
+
     /**
      * Web service operation
      */
@@ -137,7 +139,7 @@ public class servicios {
         double restaR = num1 - num2;
         return restaR;
     }
-    
+
     /**
      * Web service operation
      */
@@ -147,7 +149,7 @@ public class servicios {
         double multiplicacionR = num1 * num2;
         return multiplicacionR;
     }
-    
+
     /**
      * Web service operation
      */
@@ -157,20 +159,7 @@ public class servicios {
         int divM = num1 / num2;
         return divM;
     }
-    
 
-    /**
-     * Web service operation
-     */
-    @WebMethod(operationName = "login")
-    public Boolean login(@WebParam(name = "user") String user, @WebParam(name = "password") String password) {
-        if(user.equals("Jonnathan") && password.equals("md3108")){
-            return true;
-        }else{
-            return false;
-        }   
-    }
-    
     /**
      * Web service operation
      */
@@ -180,21 +169,20 @@ public class servicios {
         double area = base / altura;
         return area;
     }
-    
-    
-     /**
+
+    /**
      * Web service operation
      */
     @WebMethod(operationName = "factorial")
     public Integer factorial(@WebParam(name = "numero") int numero) {
         int fact = 1;
-        for(int i = 1; i<= numero; i++){
+        for (int i = 1; i <= numero; i++) {
             fact = fact * i;
         }
-        
+
         return fact;
     }
-    
+
     /**
      * Web service operation
      */
@@ -204,4 +192,114 @@ public class servicios {
         double volumen = lado1 * lado2 * lado3;
         return volumen;
     }
+
+    /**
+     * Web service operation
+     */
+    ArrayList<User> listaUser = new ArrayList<>();
+
+    @WebMethod(operationName = "signup")
+    public Boolean signup(@WebParam(name = "user") String user, @WebParam(name = "password") String password, @WebParam(name = "monto") int monto) {
+
+        boolean encuentro = false;
+        for (int i = 0; i < listaUser.size(); i++) {
+            if (user.equalsIgnoreCase(listaUser.get(i).getUser())) {
+                encuentro = true;
+            }
+        }
+        if (encuentro) {
+            return false;
+        } else {
+            listaUser.add(new User(user, password, monto));
+            return true;
+        }
+
+    }
+
+    @WebMethod(operationName = "signin")
+    public String signin(@WebParam(name = "user") String user, @WebParam(name = "password") String password) {
+
+        String us = null, pas = null;
+        int val = 0;
+
+        boolean encuentro = false;
+        for (int i = 0; i < listaUser.size(); i++) {
+            if (user.equals(listaUser.get(i).getUser()) && password.equals(listaUser.get(i).getPassword())) {
+                us = listaUser.get(i).getUser();
+                pas = listaUser.get(i).getPassword();
+                val = (int) listaUser.get(i).getMonto();
+               // miLista.add(new User(listaUser.get(i).getUser(), listaUser.get(i).getPassword(), listaUser.get(i).getMonto()));
+                encuentro = true;
+            }
+        }
+        if (encuentro) {
+            return ""+us+"/"+pas+"/"+val;
+        } else {
+            return "User Don't exit..";
+        }
+    }
+    
+    @WebMethod(operationName = "update")
+    public Integer update(@WebParam(name = "user") String user, @WebParam(name = "monto") int monto) {
+
+        boolean encuentro = false;
+        for (int i = 0; i < listaUser.size(); i++) {
+            if (user.equals(listaUser.get(i).getUser())) {
+                listaUser.get(i).setMonto(monto);
+                encuentro = true;
+            }
+        }
+        if (encuentro) {
+            return monto;
+        } else {
+            return 0;
+        }
+
+    }
+
+    public class User {
+
+        private String user;
+        private String password;
+        private double monto;
+
+        public User() {
+        }
+
+        public User(String user, String password, double monto) {
+            this.user = user;
+            this.password = password;
+            this.monto = monto;
+        }
+        
+        public User(double monto) {
+            this.monto = monto;
+        }
+
+        public String getUser() {
+            return user;
+        }
+
+        public void setUser(String user) {
+            this.user = user;
+        }
+
+        public String getPassword() {
+            return password;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
+
+        public double getMonto() {
+            return monto;
+        }
+
+        public void setMonto(double monto) {
+            this.monto = monto;
+        }
+
+    }
+
 }

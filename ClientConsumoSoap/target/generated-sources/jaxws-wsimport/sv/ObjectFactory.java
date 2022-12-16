@@ -27,23 +27,27 @@ public class ObjectFactory {
     private final static QName _ValorResultadoResponse_QNAME = new QName("http://sv/", "valorResultadoResponse");
     private final static QName _DivicionResponse_QNAME = new QName("http://sv/", "divicionResponse");
     private final static QName _RestaResponse_QNAME = new QName("http://sv/", "restaResponse");
+    private final static QName _Signin_QNAME = new QName("http://sv/", "signin");
     private final static QName _PotenciaResponse_QNAME = new QName("http://sv/", "potenciaResponse");
+    private final static QName _SignupResponse_QNAME = new QName("http://sv/", "signupResponse");
+    private final static QName _Update_QNAME = new QName("http://sv/", "update");
     private final static QName _Divicion_QNAME = new QName("http://sv/", "divicion");
     private final static QName _FactorialResponse_QNAME = new QName("http://sv/", "factorialResponse");
     private final static QName _AreaResponse_QNAME = new QName("http://sv/", "areaResponse");
     private final static QName _Diccionario_QNAME = new QName("http://sv/", "diccionario");
     private final static QName _DiccionarioResponse_QNAME = new QName("http://sv/", "diccionarioResponse");
-    private final static QName _Login_QNAME = new QName("http://sv/", "login");
     private final static QName _Suma_QNAME = new QName("http://sv/", "suma");
     private final static QName _SumaResponse_QNAME = new QName("http://sv/", "sumaResponse");
     private final static QName _Factorial_QNAME = new QName("http://sv/", "factorial");
     private final static QName _Hello_QNAME = new QName("http://sv/", "hello");
     private final static QName _Resta_QNAME = new QName("http://sv/", "resta");
     private final static QName _ParImpar_QNAME = new QName("http://sv/", "par_impar");
+    private final static QName _UpdateResponse_QNAME = new QName("http://sv/", "updateResponse");
     private final static QName _Potencia_QNAME = new QName("http://sv/", "potencia");
     private final static QName _HelloResponse_QNAME = new QName("http://sv/", "helloResponse");
+    private final static QName _SigninResponse_QNAME = new QName("http://sv/", "signinResponse");
     private final static QName _VolumenCubo_QNAME = new QName("http://sv/", "volumenCubo");
-    private final static QName _LoginResponse_QNAME = new QName("http://sv/", "loginResponse");
+    private final static QName _Signup_QNAME = new QName("http://sv/", "signup");
     private final static QName _VolumenCuboResponse_QNAME = new QName("http://sv/", "volumenCuboResponse");
     private final static QName _Multiplicacion_QNAME = new QName("http://sv/", "multiplicacion");
     private final static QName _Area_QNAME = new QName("http://sv/", "area");
@@ -91,19 +95,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link SignupResponse }
+     * 
+     */
+    public SignupResponse createSignupResponse() {
+        return new SignupResponse();
+    }
+
+    /**
+     * Create an instance of {@link Update }
+     * 
+     */
+    public Update createUpdate() {
+        return new Update();
+    }
+
+    /**
      * Create an instance of {@link DiccionarioResponse }
      * 
      */
     public DiccionarioResponse createDiccionarioResponse() {
         return new DiccionarioResponse();
-    }
-
-    /**
-     * Create an instance of {@link Login }
-     * 
-     */
-    public Login createLogin() {
-        return new Login();
     }
 
     /**
@@ -136,6 +148,14 @@ public class ObjectFactory {
      */
     public PotenciaResponse createPotenciaResponse() {
         return new PotenciaResponse();
+    }
+
+    /**
+     * Create an instance of {@link Signin }
+     * 
+     */
+    public Signin createSignin() {
+        return new Signin();
     }
 
     /**
@@ -187,14 +207,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LoginResponse }
-     * 
-     */
-    public LoginResponse createLoginResponse() {
-        return new LoginResponse();
-    }
-
-    /**
      * Create an instance of {@link ValorResultado }
      * 
      */
@@ -227,11 +239,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Signup }
+     * 
+     */
+    public Signup createSignup() {
+        return new Signup();
+    }
+
+    /**
      * Create an instance of {@link Potencia }
      * 
      */
     public Potencia createPotencia() {
         return new Potencia();
+    }
+
+    /**
+     * Create an instance of {@link SigninResponse }
+     * 
+     */
+    public SigninResponse createSigninResponse() {
+        return new SigninResponse();
     }
 
     /**
@@ -256,6 +284,14 @@ public class ObjectFactory {
      */
     public Resta createResta() {
         return new Resta();
+    }
+
+    /**
+     * Create an instance of {@link UpdateResponse }
+     * 
+     */
+    public UpdateResponse createUpdateResponse() {
+        return new UpdateResponse();
     }
 
     /**
@@ -294,12 +330,39 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Signin }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://sv/", name = "signin")
+    public JAXBElement<Signin> createSignin(Signin value) {
+        return new JAXBElement<Signin>(_Signin_QNAME, Signin.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PotenciaResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://sv/", name = "potenciaResponse")
     public JAXBElement<PotenciaResponse> createPotenciaResponse(PotenciaResponse value) {
         return new JAXBElement<PotenciaResponse>(_PotenciaResponse_QNAME, PotenciaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SignupResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://sv/", name = "signupResponse")
+    public JAXBElement<SignupResponse> createSignupResponse(SignupResponse value) {
+        return new JAXBElement<SignupResponse>(_SignupResponse_QNAME, SignupResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Update }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://sv/", name = "update")
+    public JAXBElement<Update> createUpdate(Update value) {
+        return new JAXBElement<Update>(_Update_QNAME, Update.class, null, value);
     }
 
     /**
@@ -345,15 +408,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://sv/", name = "diccionarioResponse")
     public JAXBElement<DiccionarioResponse> createDiccionarioResponse(DiccionarioResponse value) {
         return new JAXBElement<DiccionarioResponse>(_DiccionarioResponse_QNAME, DiccionarioResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Login }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://sv/", name = "login")
-    public JAXBElement<Login> createLogin(Login value) {
-        return new JAXBElement<Login>(_Login_QNAME, Login.class, null, value);
     }
 
     /**
@@ -411,6 +465,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://sv/", name = "updateResponse")
+    public JAXBElement<UpdateResponse> createUpdateResponse(UpdateResponse value) {
+        return new JAXBElement<UpdateResponse>(_UpdateResponse_QNAME, UpdateResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Potencia }{@code >}}
      * 
      */
@@ -429,6 +492,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SigninResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://sv/", name = "signinResponse")
+    public JAXBElement<SigninResponse> createSigninResponse(SigninResponse value) {
+        return new JAXBElement<SigninResponse>(_SigninResponse_QNAME, SigninResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link VolumenCubo }{@code >}}
      * 
      */
@@ -438,12 +510,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LoginResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Signup }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://sv/", name = "loginResponse")
-    public JAXBElement<LoginResponse> createLoginResponse(LoginResponse value) {
-        return new JAXBElement<LoginResponse>(_LoginResponse_QNAME, LoginResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://sv/", name = "signup")
+    public JAXBElement<Signup> createSignup(Signup value) {
+        return new JAXBElement<Signup>(_Signup_QNAME, Signup.class, null, value);
     }
 
     /**

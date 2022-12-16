@@ -4,35 +4,23 @@
 <xsd:import namespace="http://sv/" schemaLocation="http://localhost:8080/ProyectoSoapServer/servicios?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="potencia">
-<part name="parameters" element="tns:potencia"/>
+<message name="update">
+<part name="parameters" element="tns:update"/>
 </message>
-<message name="potenciaResponse">
-<part name="parameters" element="tns:potenciaResponse"/>
-</message>
-<message name="suma">
-<part name="parameters" element="tns:suma"/>
-</message>
-<message name="sumaResponse">
-<part name="parameters" element="tns:sumaResponse"/>
-</message>
-<message name="par_impar">
-<part name="parameters" element="tns:par_impar"/>
-</message>
-<message name="par_imparResponse">
-<part name="parameters" element="tns:par_imparResponse"/>
-</message>
-<message name="hello">
-<part name="parameters" element="tns:hello"/>
-</message>
-<message name="helloResponse">
-<part name="parameters" element="tns:helloResponse"/>
+<message name="updateResponse">
+<part name="parameters" element="tns:updateResponse"/>
 </message>
 <message name="valorResultado">
 <part name="parameters" element="tns:valorResultado"/>
 </message>
 <message name="valorResultadoResponse">
 <part name="parameters" element="tns:valorResultadoResponse"/>
+</message>
+<message name="signup">
+<part name="parameters" element="tns:signup"/>
+</message>
+<message name="signupResponse">
+<part name="parameters" element="tns:signupResponse"/>
 </message>
 <message name="diccionario">
 <part name="parameters" element="tns:diccionario"/>
@@ -46,35 +34,11 @@
 <message name="multiplicacionResponse">
 <part name="parameters" element="tns:multiplicacionResponse"/>
 </message>
-<message name="resta">
-<part name="parameters" element="tns:resta"/>
+<message name="potencia">
+<part name="parameters" element="tns:potencia"/>
 </message>
-<message name="restaResponse">
-<part name="parameters" element="tns:restaResponse"/>
-</message>
-<message name="divicion">
-<part name="parameters" element="tns:divicion"/>
-</message>
-<message name="divicionResponse">
-<part name="parameters" element="tns:divicionResponse"/>
-</message>
-<message name="factorial">
-<part name="parameters" element="tns:factorial"/>
-</message>
-<message name="factorialResponse">
-<part name="parameters" element="tns:factorialResponse"/>
-</message>
-<message name="login">
-<part name="parameters" element="tns:login"/>
-</message>
-<message name="loginResponse">
-<part name="parameters" element="tns:loginResponse"/>
-</message>
-<message name="volumenCubo">
-<part name="parameters" element="tns:volumenCubo"/>
-</message>
-<message name="volumenCuboResponse">
-<part name="parameters" element="tns:volumenCuboResponse"/>
+<message name="potenciaResponse">
+<part name="parameters" element="tns:potenciaResponse"/>
 </message>
 <message name="area">
 <part name="parameters" element="tns:area"/>
@@ -82,26 +46,66 @@
 <message name="areaResponse">
 <part name="parameters" element="tns:areaResponse"/>
 </message>
+<message name="factorial">
+<part name="parameters" element="tns:factorial"/>
+</message>
+<message name="factorialResponse">
+<part name="parameters" element="tns:factorialResponse"/>
+</message>
+<message name="signin">
+<part name="parameters" element="tns:signin"/>
+</message>
+<message name="signinResponse">
+<part name="parameters" element="tns:signinResponse"/>
+</message>
+<message name="divicion">
+<part name="parameters" element="tns:divicion"/>
+</message>
+<message name="divicionResponse">
+<part name="parameters" element="tns:divicionResponse"/>
+</message>
+<message name="hello">
+<part name="parameters" element="tns:hello"/>
+</message>
+<message name="helloResponse">
+<part name="parameters" element="tns:helloResponse"/>
+</message>
+<message name="par_impar">
+<part name="parameters" element="tns:par_impar"/>
+</message>
+<message name="par_imparResponse">
+<part name="parameters" element="tns:par_imparResponse"/>
+</message>
+<message name="resta">
+<part name="parameters" element="tns:resta"/>
+</message>
+<message name="restaResponse">
+<part name="parameters" element="tns:restaResponse"/>
+</message>
+<message name="volumenCubo">
+<part name="parameters" element="tns:volumenCubo"/>
+</message>
+<message name="volumenCuboResponse">
+<part name="parameters" element="tns:volumenCuboResponse"/>
+</message>
+<message name="suma">
+<part name="parameters" element="tns:suma"/>
+</message>
+<message name="sumaResponse">
+<part name="parameters" element="tns:sumaResponse"/>
+</message>
 <portType name="servicios">
-<operation name="potencia">
-<input wsam:Action="http://sv/servicios/potenciaRequest" message="tns:potencia"/>
-<output wsam:Action="http://sv/servicios/potenciaResponse" message="tns:potenciaResponse"/>
-</operation>
-<operation name="suma">
-<input wsam:Action="http://sv/servicios/sumaRequest" message="tns:suma"/>
-<output wsam:Action="http://sv/servicios/sumaResponse" message="tns:sumaResponse"/>
-</operation>
-<operation name="par_impar">
-<input wsam:Action="http://sv/servicios/par_imparRequest" message="tns:par_impar"/>
-<output wsam:Action="http://sv/servicios/par_imparResponse" message="tns:par_imparResponse"/>
-</operation>
-<operation name="hello">
-<input wsam:Action="http://sv/servicios/helloRequest" message="tns:hello"/>
-<output wsam:Action="http://sv/servicios/helloResponse" message="tns:helloResponse"/>
+<operation name="update">
+<input wsam:Action="http://sv/servicios/updateRequest" message="tns:update"/>
+<output wsam:Action="http://sv/servicios/updateResponse" message="tns:updateResponse"/>
 </operation>
 <operation name="valorResultado">
 <input wsam:Action="http://sv/servicios/valorResultadoRequest" message="tns:valorResultado"/>
 <output wsam:Action="http://sv/servicios/valorResultadoResponse" message="tns:valorResultadoResponse"/>
+</operation>
+<operation name="signup">
+<input wsam:Action="http://sv/servicios/signupRequest" message="tns:signup"/>
+<output wsam:Action="http://sv/servicios/signupResponse" message="tns:signupResponse"/>
 </operation>
 <operation name="diccionario">
 <input wsam:Action="http://sv/servicios/diccionarioRequest" message="tns:diccionario"/>
@@ -111,61 +115,50 @@
 <input wsam:Action="http://sv/servicios/multiplicacionRequest" message="tns:multiplicacion"/>
 <output wsam:Action="http://sv/servicios/multiplicacionResponse" message="tns:multiplicacionResponse"/>
 </operation>
-<operation name="resta">
-<input wsam:Action="http://sv/servicios/restaRequest" message="tns:resta"/>
-<output wsam:Action="http://sv/servicios/restaResponse" message="tns:restaResponse"/>
-</operation>
-<operation name="divicion">
-<input wsam:Action="http://sv/servicios/divicionRequest" message="tns:divicion"/>
-<output wsam:Action="http://sv/servicios/divicionResponse" message="tns:divicionResponse"/>
-</operation>
-<operation name="factorial">
-<input wsam:Action="http://sv/servicios/factorialRequest" message="tns:factorial"/>
-<output wsam:Action="http://sv/servicios/factorialResponse" message="tns:factorialResponse"/>
-</operation>
-<operation name="login">
-<input wsam:Action="http://sv/servicios/loginRequest" message="tns:login"/>
-<output wsam:Action="http://sv/servicios/loginResponse" message="tns:loginResponse"/>
-</operation>
-<operation name="volumenCubo">
-<input wsam:Action="http://sv/servicios/volumenCuboRequest" message="tns:volumenCubo"/>
-<output wsam:Action="http://sv/servicios/volumenCuboResponse" message="tns:volumenCuboResponse"/>
+<operation name="potencia">
+<input wsam:Action="http://sv/servicios/potenciaRequest" message="tns:potencia"/>
+<output wsam:Action="http://sv/servicios/potenciaResponse" message="tns:potenciaResponse"/>
 </operation>
 <operation name="area">
 <input wsam:Action="http://sv/servicios/areaRequest" message="tns:area"/>
 <output wsam:Action="http://sv/servicios/areaResponse" message="tns:areaResponse"/>
 </operation>
+<operation name="factorial">
+<input wsam:Action="http://sv/servicios/factorialRequest" message="tns:factorial"/>
+<output wsam:Action="http://sv/servicios/factorialResponse" message="tns:factorialResponse"/>
+</operation>
+<operation name="signin">
+<input wsam:Action="http://sv/servicios/signinRequest" message="tns:signin"/>
+<output wsam:Action="http://sv/servicios/signinResponse" message="tns:signinResponse"/>
+</operation>
+<operation name="divicion">
+<input wsam:Action="http://sv/servicios/divicionRequest" message="tns:divicion"/>
+<output wsam:Action="http://sv/servicios/divicionResponse" message="tns:divicionResponse"/>
+</operation>
+<operation name="hello">
+<input wsam:Action="http://sv/servicios/helloRequest" message="tns:hello"/>
+<output wsam:Action="http://sv/servicios/helloResponse" message="tns:helloResponse"/>
+</operation>
+<operation name="par_impar">
+<input wsam:Action="http://sv/servicios/par_imparRequest" message="tns:par_impar"/>
+<output wsam:Action="http://sv/servicios/par_imparResponse" message="tns:par_imparResponse"/>
+</operation>
+<operation name="resta">
+<input wsam:Action="http://sv/servicios/restaRequest" message="tns:resta"/>
+<output wsam:Action="http://sv/servicios/restaResponse" message="tns:restaResponse"/>
+</operation>
+<operation name="volumenCubo">
+<input wsam:Action="http://sv/servicios/volumenCuboRequest" message="tns:volumenCubo"/>
+<output wsam:Action="http://sv/servicios/volumenCuboResponse" message="tns:volumenCuboResponse"/>
+</operation>
+<operation name="suma">
+<input wsam:Action="http://sv/servicios/sumaRequest" message="tns:suma"/>
+<output wsam:Action="http://sv/servicios/sumaResponse" message="tns:sumaResponse"/>
+</operation>
 </portType>
 <binding name="serviciosPortBinding" type="tns:servicios">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="potencia">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="suma">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="par_impar">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="hello">
+<operation name="update">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -175,6 +168,15 @@
 </output>
 </operation>
 <operation name="valorResultado">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="signup">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -201,7 +203,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="resta">
+<operation name="potencia">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -210,7 +212,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="divicion">
+<operation name="area">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -228,7 +230,43 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="login">
+<operation name="signin">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="divicion">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="hello">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="par_impar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="resta">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -246,7 +284,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="area">
+<operation name="suma">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

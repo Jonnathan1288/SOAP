@@ -5,6 +5,14 @@
  */
 package view;
 
+import efectos.MaterialColor;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author DELL
@@ -31,24 +39,24 @@ public class FormDepRet extends javax.swing.JFrame {
         fadeEffect1 = new LIB.FadeEffect();
         materialColor1 = new efectos.MaterialColor();
         jSeparator2 = new javax.swing.JSeparator();
+        groupViewDepReg = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lblNameUser = new javax.swing.JLabel();
+        lblSaldoUser = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        fSLabel1 = new LIB.FSLabel();
+        btnConfirmOperation = new javax.swing.JButton();
+        btnCancelOperation = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtValorResta = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
-        jLabel8 = new javax.swing.JLabel();
+        lblMessageSuccessful = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        btnGroupDep = new javax.swing.JRadioButton();
+        btnGroupRet = new javax.swing.JRadioButton();
 
         fSTexFieldMD1.setText("fSTexFieldMD1");
 
@@ -66,9 +74,9 @@ public class FormDepRet extends javax.swing.JFrame {
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Jonnathan Gallegos");
+        lblNameUser.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblNameUser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNameUser.setText("Jonnathan Gallegos");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -80,7 +88,7 @@ public class FormDepRet extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblNameUser, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -90,67 +98,58 @@ public class FormDepRet extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jSeparator1)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))
+                    .addComponent(lblNameUser, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("$ 100 ");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 75, 33));
+        lblSaldoUser.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblSaldoUser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSaldoUser.setText("$ 100 ");
+        getContentPane().add(lblSaldoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 75, 33));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Valor:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 83, 40));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 83, 40));
 
-        jButton1.setText("Ingresar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 136, 43));
+        btnConfirmOperation.setText("Confirm");
+        getContentPane().add(btnConfirmOperation, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 136, 43));
 
-        jButton2.setText("Registrarse");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 136, 43));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Saldo insuficiente");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, -1, -1));
-
-        fSLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-cuenta-comercial-70.png"))); // NOI18N
-        fSLabel1.setText("");
-        getContentPane().add(fSLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 92, -1, -1));
+        btnCancelOperation.setText("Salir");
+        btnCancelOperation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelOperationActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCancelOperation, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 136, 43));
 
         jSeparator3.setBackground(new java.awt.Color(0, 51, 204));
-        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 230, 10));
+        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 230, 10));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Saldo:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 210, 75, 33));
-
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Depocito", "Retiro" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 271, 230, 30));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 75, 33));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Opción:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 83, 33));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 83, 40));
 
-        jTextField1.setBackground(new java.awt.Color(240, 240, 240));
-        jTextField1.setBorder(null);
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, 230, 40));
+        txtValorResta.setBackground(new java.awt.Color(204, 255, 255));
+        txtValorResta.setBorder(null);
+        getContentPane().add(txtValorResta, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 230, 40));
 
         jSeparator4.setBackground(new java.awt.Color(0, 51, 204));
-        getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 230, 20));
+        getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 230, 20));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Retiro realizado con éxito");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, -1, -1));
+        lblMessageSuccessful.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblMessageSuccessful.setForeground(new java.awt.Color(0, 0, 255));
+        lblMessageSuccessful.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblMessageSuccessful.setText("Retiro realizado con éxito");
+        getContentPane().add(lblMessageSuccessful, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 270, 330, -1));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -165,69 +164,128 @@ public class FormDepRet extends javax.swing.JFrame {
             .addGap(0, 30, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 350, 30));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 350, 30));
+
+        groupViewDepReg.add(btnGroupDep);
+        btnGroupDep.setText("Depocito");
+        getContentPane().add(btnGroupDep, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, -1, -1));
+
+        groupViewDepReg.add(btnGroupRet);
+        btnGroupRet.setText("Retiro");
+        getContentPane().add(btnGroupRet, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FormDepRet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FormDepRet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FormDepRet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FormDepRet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
+    private void btnCancelOperationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelOperationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelOperationActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FormDepRet().setVisible(true);
-            }
-        });
+    public JButton getBtnCancelOperation() {
+        return btnCancelOperation;
     }
 
+    public void setBtnCancelOperation(JButton btnCancelOperation) {
+        this.btnCancelOperation = btnCancelOperation;
+    }
+
+    public JButton getBtnConfirmOperation() {
+        return btnConfirmOperation;
+    }
+
+    public void setBtnConfirmOperation(JButton btnConfirmOperation) {
+        this.btnConfirmOperation = btnConfirmOperation;
+    }
+
+    public JLabel getLblMessageSuccessful() {
+        return lblMessageSuccessful;
+    }
+
+    public void setLblMessageSuccessful(JLabel lblMessageSuccessful) {
+        this.lblMessageSuccessful = lblMessageSuccessful;
+    }
+
+    public JLabel getLblNameUser() {
+        return lblNameUser;
+    }
+
+    public void setLblNameUser(JLabel lblNameUser) {
+        this.lblNameUser = lblNameUser;
+    }
+
+    public JLabel getLblSaldoUser() {
+        return lblSaldoUser;
+    }
+
+    public void setLblSaldoUser(JLabel lblSaldoUser) {
+        this.lblSaldoUser = lblSaldoUser;
+    }
+
+    public MaterialColor getMaterialColor1() {
+        return materialColor1;
+    }
+
+    public void setMaterialColor1(MaterialColor materialColor1) {
+        this.materialColor1 = materialColor1;
+    }
+
+    public JTextField getTxtValorResta() {
+        return txtValorResta;
+    }
+
+    public void setTxtValorResta(JTextField txtValorResta) {
+        this.txtValorResta = txtValorResta;
+    }
+
+    public JRadioButton getBtnGroupDep() {
+        return btnGroupDep;
+    }
+
+    public void setBtnGroupDep(JRadioButton btnGroupDep) {
+        this.btnGroupDep = btnGroupDep;
+    }
+
+    public JRadioButton getBtnGroupRet() {
+        return btnGroupRet;
+    }
+
+    public void setBtnGroupRet(JRadioButton btnGroupRet) {
+        this.btnGroupRet = btnGroupRet;
+    }
+
+    public ButtonGroup getGroupViewDepReg() {
+        return groupViewDepReg;
+    }
+
+    public void setGroupViewDepReg(ButtonGroup groupViewDepReg) {
+        this.groupViewDepReg = groupViewDepReg;
+    }
+    
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private LIB.FSLabel fSLabel1;
+    private javax.swing.JButton btnCancelOperation;
+    private javax.swing.JButton btnConfirmOperation;
+    private javax.swing.JRadioButton btnGroupDep;
+    private javax.swing.JRadioButton btnGroupRet;
     private LIB.FSTexFieldMD fSTexFieldMD1;
     private LIB.FadeEffect fadeEffect1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.ButtonGroup groupViewDepReg;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblMessageSuccessful;
+    private javax.swing.JLabel lblNameUser;
+    private javax.swing.JLabel lblSaldoUser;
     private efectos.MaterialColor materialColor1;
+    private javax.swing.JTextField txtValorResta;
     // End of variables declaration//GEN-END:variables
 }

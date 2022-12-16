@@ -20,10 +20,6 @@
 
 <xs:element name="helloResponse" type="tns:helloResponse"/>
 
-<xs:element name="login" type="tns:login"/>
-
-<xs:element name="loginResponse" type="tns:loginResponse"/>
-
 <xs:element name="multiplicacion" type="tns:multiplicacion"/>
 
 <xs:element name="multiplicacionResponse" type="tns:multiplicacionResponse"/>
@@ -40,9 +36,21 @@
 
 <xs:element name="restaResponse" type="tns:restaResponse"/>
 
+<xs:element name="signin" type="tns:signin"/>
+
+<xs:element name="signinResponse" type="tns:signinResponse"/>
+
+<xs:element name="signup" type="tns:signup"/>
+
+<xs:element name="signupResponse" type="tns:signupResponse"/>
+
 <xs:element name="suma" type="tns:suma"/>
 
 <xs:element name="sumaResponse" type="tns:sumaResponse"/>
+
+<xs:element name="update" type="tns:update"/>
+
+<xs:element name="updateResponse" type="tns:updateResponse"/>
 
 <xs:element name="valorResultado" type="tns:valorResultado"/>
 
@@ -89,19 +97,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="suma">
-<xs:sequence>
-<xs:element name="Num1" type="xs:double"/>
-<xs:element name="Num2" type="xs:double"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="sumaResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:double" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="area">
 <xs:sequence>
 <xs:element name="base" type="xs:double"/>
@@ -115,14 +110,28 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="login">
+<xs:complexType name="suma">
 <xs:sequence>
-<xs:element name="user" type="xs:string" minOccurs="0"/>
-<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="Num1" type="xs:double"/>
+<xs:element name="Num2" type="xs:double"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="loginResponse">
+<xs:complexType name="sumaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="signup">
+<xs:sequence>
+<xs:element name="user" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="monto" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="signupResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean" minOccurs="0"/>
 </xs:sequence>
@@ -137,6 +146,19 @@
 <xs:complexType name="diccionarioResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="update">
+<xs:sequence>
+<xs:element name="user" type="xs:string" minOccurs="0"/>
+<xs:element name="monto" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -164,6 +186,19 @@
 <xs:complexType name="volumenCuboResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="signin">
+<xs:sequence>
+<xs:element name="user" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="signinResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
